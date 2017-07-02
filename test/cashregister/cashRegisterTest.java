@@ -17,4 +17,18 @@ public class cashRegisterTest {
         cashRegister.process(purchase);
         assertTrue(mockPrinter.isPrinterCalled());
     }
+
+    @Test
+    public void cashRegisterShouldPrintMockPurchaseMade() {
+        Item items[] = new Item[1];
+        items[0]=new Item("Book",30);
+        MockPurchase mockPurchase = new MockPurchase(items);
+        MockPrinter mockPrinter = new MockPrinter();
+
+        CashRegister cashRegister = new CashRegister(mockPrinter);
+        cashRegister.process(mockPurchase);
+
+        assertTrue(mockPrinter.isPrinterCalled());
+
+    }
 }
