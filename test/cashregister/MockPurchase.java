@@ -1,5 +1,7 @@
 package cashregister;
 
+import cashregister.Purchase;
+
 public class MockPurchase extends Purchase {
 
     public MockPurchase() {
